@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-image: url("images.jpg");
+  background-size: cover;
+  font-family: sans-serif;
+  color: white;
+  text-align: center;
+  height: 100vh;
+}
+
+img {
+  width: 15vw;
+}
+.result {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.number {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px;
+  border: 1px solid white;
+}
