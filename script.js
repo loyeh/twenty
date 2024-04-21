@@ -10,10 +10,40 @@ function isNumeric(num) {
   return !isNaN(num);
 }
 
-//checking the said number with the random one
-function checkNumber(number) {
-  const resultText = document.getElementById("resultText");
+// converting text to numbers below ten
+function belowTen(text) {
+  switch (text) {
+    case "one":
+      return 1;
+    case "two":
+      return 2;
+    case "three":
+      return 3;
+    case "four":
+      return 4;
+    case "five":
+      return 5;
+    case "six":
+      return 6;
+    case "seven":
+      return 7;
+    case "eight":
+      return 8;
+    case "nine":
+      return 9;
+    default:
+      return text;
+  }
+}
 
+//checking the said number with the random one
+function checkNumber(text) {
+  const resultText = document.getElementById("resultText");
+  let number = belowTen(text);
+  console.log(number);
+  const myNumber = document.getElementById("number");
+
+  myNumber.innerText = number;
   console.log(isNumeric(number));
   if (isNumeric(number)) {
     if (number > 0 && number <= 100) {
@@ -48,9 +78,7 @@ recognition.addEventListener("result", (e) => {
     result.innerHTML = `<p>You said:</p>
     <div class="number" id="number"></div><p id="resultText"></p>
     `;
-    const myNumber = document.getElementById("number");
 
-    myNumber.innerText = test;
     console.log("yes");
     checkNumber(test);
   }
