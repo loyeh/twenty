@@ -18,13 +18,13 @@ function checkNumber(number) {
   if (isNumeric(number)) {
     if (number > 0 && number <= 100) {
       if (number == randomNum) {
-        main.innerHTML = `<h5>Congrats! You have guessed the number</h5><h5>it was ${randomNum} </h5><button onclick="window.location.reload()">Play Again</button>`;
+        main.innerHTML = `<h3>Congrats! You have guessed the number</h3><h3>it was ${randomNum} </h3><button onclick="window.location.reload()">Play Again</button>`;
       }
       if (number > randomNum) {
-        resultText.innerText = "go lower";
+        resultText.innerText = "GO LOWER";
       }
       if (number < randomNum) {
-        resultText.innerText = "go higher";
+        resultText.innerText = "GO HIGHER";
       }
     } else {
       resultText.innerText = "Please say a number between 1 and 100";
